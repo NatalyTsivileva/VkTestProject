@@ -16,5 +16,4 @@ rootProject.name = "VkTodoList"
 include ':app'
 include ':database'
 include ':core'
-include ':feature_tasklist'
-include ':feature_create_task'
+include ':task'

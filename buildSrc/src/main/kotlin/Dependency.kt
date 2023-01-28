@@ -32,6 +32,17 @@ object Dependency {
 		val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION"
 	}
 
+	object Room{
+		private const val ROOM_VERSION = "2.5.0"
+
+		const val ROOM = "androidx.room:room-runtime:$ROOM_VERSION"
+		const val ANNOTATION_PROCESSOR = "androidx.room:room-compiler:$ROOM_VERSION"
+
+		const val KOTLIN_KAPT ="androidx.room:room-compiler:$ROOM_VERSION"
+
+		const val COROUTINE_EXT = "androidx.room:room-ktx:$ROOM_VERSION"
+	}
+
 	object Testing {
 		private const val JUNIT_VERSION = "4.13.2"
 		private const val JUNIT_EXT_VERSION = "1.1.5"
