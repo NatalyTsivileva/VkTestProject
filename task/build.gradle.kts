@@ -14,3 +14,8 @@ dependencies {
 	implementation(Dependency.Room.ROOM)
 	implementation(Dependency.Ui.MATERIAL)
 }
+
+
+hilt {
+	enableAggregatingTask = true
+}

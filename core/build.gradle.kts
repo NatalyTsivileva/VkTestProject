@@ -6,3 +6,9 @@ plugins {
 android {
     namespace = "com.tsivileva.core"
 }
+
+
+
+hilt {
+    enableAggregatingTask = true
+}

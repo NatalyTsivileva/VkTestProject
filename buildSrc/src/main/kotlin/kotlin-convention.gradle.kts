@@ -1,4 +1,5 @@
 import com.android.build.gradle.BaseExtension
+import org.jetbrains.kotlin.gradle.plugin.KaptExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 extensions.configure<BaseExtension>("android") {

@@ -5,7 +5,7 @@ import com.tsivileva.database.AppDatabase
 import com.tsivileva.database.entities.TaskModelConverter
 
 class TaskRepositoryImpl(
-	private val database: AppDatabase
+	database: AppDatabase
 ) : TaskRepository {
 
 	private val taskDao = database.taskDao()

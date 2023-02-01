@@ -43,6 +43,12 @@ object Dependency {
 		const val COROUTINE_EXT = "androidx.room:room-ktx:$ROOM_VERSION"
 	}
 
+	object Hilt {
+		const val HILT = "com.google.dagger:hilt-android:${Versions.HILT_VERSION}"
+		const val HILT_KAPT= "com.google.dagger:hilt-android-compiler:${Versions.HILT_VERSION}"
+		const val JAVAPOET ="com.squareup:javapoet:${Versions.JAVAPOET_VERSION}"
+	}
+
 	object Testing {
 		private const val JUNIT_VERSION = "4.13.2"
 		private const val JUNIT_EXT_VERSION = "1.1.5"

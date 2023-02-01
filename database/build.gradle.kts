@@ -1,7 +1,7 @@
 plugins {
 	id(Plugins.LIBRARY)
-	id(Plugins.COMMON_CONVENTIONS)
 	id(Plugins.KOTLIN_KAPT)
+	id(Plugins.COMMON_CONVENTIONS)
 }
 
 android {
@@ -11,10 +11,12 @@ android {
 dependencies {
 	implementation(project(Modules.CORE))
 
+	kapt(Dependency.Room.KOTLIN_KAPT)
 	implementation(Dependency.Room.ROOM)
 	implementation(Dependency.Room.COROUTINE_EXT)
+}
 
-    kapt(Dependency.Room.KOTLIN_KAPT)
 
-    annotationProcessor(Dependency.Room.ANNOTATION_PROCESSOR)
+hilt {
+	enableAggregatingTask = true
 }
