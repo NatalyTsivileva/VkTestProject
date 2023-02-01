@@ -9,7 +9,7 @@ import com.tsivileva.core.data.TaskStatus
 data class TaskEntity(
 
 	@PrimaryKey(autoGenerate = true)
-	val id: Int,
+	val id: Long = 0L,
 
 	val text: String,
 

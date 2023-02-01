@@ -6,7 +6,7 @@ extensions.configure<BaseExtension>("android") {
 	defaultConfig {
 		minSdk = Config.MIN_SDK
 		targetSdk = Config.TARGET_SDK
-		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+		testInstrumentationRunner = "com.tsivileva.vktodolist.runner.TodoTestRunner"
 		consumerProguardFiles("consumer-rules.pro")
 	}
 }

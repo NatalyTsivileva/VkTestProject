@@ -14,6 +14,7 @@ dependencies {
 
 	"testImplementation"(Dependency.Testing.JUNIT)
 
+	"testImplementation"(Dependency.Testing.JUNIT_EXT)
 	"androidTestImplementation"(Dependency.Testing.JUNIT_EXT)
 
 

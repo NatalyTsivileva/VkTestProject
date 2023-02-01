@@ -3,10 +3,9 @@ package com.tsivileva.task.repository
 import com.tsivileva.core.data.Task
 import com.tsivileva.database.AppDatabase
 import com.tsivileva.database.entities.TaskModelConverter
+import javax.inject.Inject
 
-class TaskRepositoryImpl(
-	database: AppDatabase
-) : TaskRepository {
+class TaskRepositoryImpl @Inject constructor(database: AppDatabase) : TaskRepository {
 
 	private val taskDao = database.taskDao()
 

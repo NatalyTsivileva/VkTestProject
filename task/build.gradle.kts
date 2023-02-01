@@ -12,6 +12,9 @@ dependencies {
 	implementation(project(Modules.DATABASE))
 
 	implementation(Dependency.Room.ROOM)
+
+	implementation(Dependency.ViewModel.VIEW_MODEL)
+
 	implementation(Dependency.Ui.MATERIAL)
 }
 

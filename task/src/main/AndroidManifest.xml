@@ -9,7 +9,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/Theme.VkTodoList">
 		<activity
-			android:name=".ui.TaskActivity"
+			android:name=".ui.activity.TaskActivity"
 			android:exported="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
