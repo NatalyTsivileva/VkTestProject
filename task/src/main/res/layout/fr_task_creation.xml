@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	android:padding="@dimen/m2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<RadioGroup
+				android:id="@+id/statusRadioGroup"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<RadioButton
+					android:id="@+id/rbTodo"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					android:padding="@dimen/m2"
+					android:text="@string/task_status_todo" />
+
+				<RadioButton
+					android:id="@+id/rbInProgress"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/m2"
+					android:text="@string/task_status_inprogress" />
+
+				<RadioButton
+					android:id="@+id/rbDone"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/m2"
+					android:text="@string/task_status_done" />
+			</RadioGroup>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/taskNameLayout"
+				style="@style/TaskInputStyle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/m1"
+				android:hint="@string/task_name"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/statusRadioGroup">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content" />
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/descriptionLayout"
+				style="@style/TaskInputStyle"
+				android:layout_width="match_parent"
+				android:layout_height="100dp"
+				android:layout_marginTop="@dimen/m2"
+				android:hint="@string/task_description"
+				app:layout_constraintBottom_toTopOf="@id/saveBtn"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/taskNameLayout"
+				app:layout_constraintVertical_bias="0">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="top" />
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+
+			<Button
+				android:id="@+id/saveBtn"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="@string/save_task"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent" />
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

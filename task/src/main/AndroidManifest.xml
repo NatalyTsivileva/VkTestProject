@@ -9,6 +9,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/Theme.VkTodoList">
 		<activity
+			android:windowSoftInputMode="adjustResize"
 			android:name=".ui.activity.TaskActivity"
 			android:exported="true">
 			<intent-filter>

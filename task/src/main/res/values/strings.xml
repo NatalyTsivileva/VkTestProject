@@ -1,3 +1,13 @@
 <resources>
 	<string name="app_name">task</string>
+	<string name="emptyTaskList">Task List is empty. Please, add one.</string>
+	<string name="task_name">Task name</string>
+	<string name="task_description">Task description</string>
+	<string name="save_task">Save task</string>
+
+	<string name="adding_task_successful">Task is added</string>
+	<string name="adding_task_failed">ERROR: Failed to add task. Please check the fields</string>
+	<string name="task_status_todo">ToDo</string>
+	<string name="task_status_inprogress">In progress</string>
+	<string name="task_status_done">Done</string>
 </resources>

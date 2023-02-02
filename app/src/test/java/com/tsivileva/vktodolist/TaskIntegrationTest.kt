@@ -2,7 +2,7 @@ package com.tsivileva.vktodolist
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.tsivileva.task.repository.TaskRepository
-import com.tsivileva.task.ui.fragment.TaskViewModel
+import com.tsivileva.task.ui.fragment.list.TaskListViewModel
 import com.tsivileva.vktodolist.stub.TaskRepositoryStub
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
@@ -20,14 +20,14 @@ class TaskIntegrationTest {
 	@get:Rule
 	val rule = InstantTaskExecutorRule()
 
-	private lateinit var viewModel: TaskViewModel
+	private lateinit var viewModel: TaskListViewModel
 	private val repository: TaskRepository = TaskRepositoryStub()
 
 
 	@Before
 	fun setUpViewModel() {
 		Dispatchers.setMain(UnconfinedTestDispatcher())
-		viewModel = TaskViewModel(repository)
+		viewModel = TaskListViewModel(repository)
 	}
 
 	@After

@@ -35,6 +35,7 @@ object Dependency {
 
 		val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION"
 		val LIVE_DATA = "androidx.lifecycle:lifecycle-livedata-ktx:$LIFECYCLE_VERSION"
+		val LIVECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:$LIFECYCLE_VERSION"
 	}
 
 	object Room {
@@ -64,6 +65,7 @@ object Dependency {
 
 		const val COROUTINES_TEST =
 			"org.jetbrains.kotlinx:kotlinx-coroutines-test:${COROUTINES_VERSION}"
+
 	}
 
 	object Testing {

@@ -24,7 +24,7 @@ class TaskRepositoryStub : TaskRepository {
 		fun createTaskList(count: Int = TASK_COUNT) = (0 until count).map {
 			Task(
 				id = it.toLong(),
-				text = "task${it}",
+				name = "task${it}",
 				creationTime = it.toLong()
 			)
 		}

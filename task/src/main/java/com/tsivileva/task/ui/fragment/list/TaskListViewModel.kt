@@ -1,4 +1,4 @@
-package com.tsivileva.task.ui.fragment
+package com.tsivileva.task.ui.fragment.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class TaskViewModel @Inject constructor(
+class TaskListViewModel @Inject constructor(
 	private val repository: TaskRepository
 ) : ViewModel() {
 
@@ -22,13 +22,9 @@ class TaskViewModel @Inject constructor(
 		emptyList()
 	)
 
-	suspend fun getTaskList() =
-			_taskListStateFlow.emit(repository.getTaskList())
-
-
-	fun addTask(task: Task) {
+	fun getTaskList() {
 		viewModelScope.launch {
-			repository.addTask(task)
+			_taskListStateFlow.emit(repository.getTaskList())
 		}
 	}
 

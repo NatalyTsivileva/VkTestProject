@@ -5,6 +5,8 @@ plugins {
 
 android {
 	namespace = "com.tsivileva.task"
+
+	viewBinding.isEnabled = true
 }
 
 dependencies {
@@ -16,6 +18,9 @@ dependencies {
 	implementation(Dependency.ViewModel.VIEW_MODEL)
 
 	implementation(Dependency.Ui.MATERIAL)
+
+	implementation(Dependency.ViewModel.LIVECYCLE)
+
 }
 
 

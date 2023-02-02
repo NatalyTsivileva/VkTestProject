@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="@dimen/m1"
+	android:padding="@dimen/m1"
+	app:cardElevation="@dimen/m1"
+	app:cardCornerRadius="@dimen/m1">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingStart="@dimen/m2"
+		android:paddingEnd="@dimen/m2"
+		android:paddingTop="@dimen/m1"
+		android:paddingBottom="@dimen/m1">
+
+
+		<TextView
+			android:id="@+id/name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Task Name"
+			android:textStyle="bold"
+			android:textSize="@dimen/s18"/>
+
+		<TextView
+			android:id="@+id/time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1"
+			app:layout_constraintStart_toEndOf="@id/name"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="01.01.22 15:02:34" />
+
+		<TextView
+			android:id="@+id/description"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_marginTop="@dimen/m1"
+			app:layout_constraintStart_toStartOf="@id/name"
+			app:layout_constraintTop_toBottomOf="@id/name"
+			tools:text="Task description" />
+
+		<TextView
+			android:id="@+id/statusText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/m2"
+			app:layout_constraintStart_toStartOf="@id/name"
+			app:layout_constraintTop_toBottomOf="@id/description"
+			tools:text="Done" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/statusImage"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="@dimen/m1"
+			android:minHeight="@dimen/m1"
+			app:layout_constraintBottom_toBottomOf="@id/statusText"
+			app:layout_constraintStart_toEndOf="@id/statusText"
+			app:layout_constraintTop_toTopOf="@id/statusText" />
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

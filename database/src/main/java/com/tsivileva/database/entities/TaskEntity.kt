@@ -11,7 +11,9 @@ data class TaskEntity(
 	@PrimaryKey(autoGenerate = true)
 	val id: Long = 0L,
 
-	val text: String,
+	val name: String,
+
+	val description: String,
 
 	val creationTime: Long,
 
