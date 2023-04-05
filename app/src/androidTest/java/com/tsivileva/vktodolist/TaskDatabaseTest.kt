@@ -37,7 +37,8 @@ class TaskDatabaseTest {
 
 		val task = TaskEntity(
 			id = expectedId,
-			text = "testText",
+			name = "testText",
+			description = "",
 			creationTime = 100L,
 			textColor = Color.RED,
 			status = Undefined
@@ -61,7 +62,8 @@ class TaskDatabaseTest {
 
 	private fun createTaskList(count: Int) = (0 until count).map {
 		TaskEntity(
-			text = "task${it}",
+			name = "task${it}",
+			description="",
 			creationTime = System.currentTimeMillis(),
 			textColor = Color.RED,
 			status = Undefined
